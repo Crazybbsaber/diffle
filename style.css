@@ -83,6 +83,10 @@ h2 {
     pointer-events: none;
 }
 
+h4 {
+	font-family: 'HK Super Round Bold';
+}
+
 #game {
     width: 100%;
     margin: 5rem 0 25rem 0;
@@ -316,7 +320,7 @@ h2 {
     align-items: center;
 }
 
-#share_button, #share_image_button  {
+#share_button, #share_image_button, #play_again_button, #switch_mode_button {
     background-color: #4fb061;
     color: white;
     font-family: inherit;

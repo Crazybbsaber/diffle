@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diffle</title>
+    <title>Diffle Practice</title>
     <meta name="description"
         content="Another Wordle spin-off game! Guess word of variable length. Each guess, hint tells the order the letters used">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/favicon.ico">
 </head>
 
 <body>
     <div class="wrapper">
-        <header class="title">
-            <h1>DIFFLE</h1>
+        <header class="title" style="height: 7.5vh;">
+			<div class="title-practice" style="display: flex; flex-direction: column;">
+				<h1 style="margin: 0">DIFFLE</h1>
+				<h3 style="margin: 0;">PRACTICE</h3>
+			</div>
             <label for="open_help" style="position: absolute; left: 1rem;">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
                     <path fill="#878a8c"
@@ -30,7 +33,7 @@
                 </svg>
             </label>
         </header>
-        <div id="game">
+        <div id="game" style="margin:8vh 0 25rem 0">
             <div id="board">
                 <div id="input_row" class="guess empty"></div>
             </div>
@@ -56,8 +59,11 @@
                             </path>
                         </svg>
                     </button>
-					<button id="switch_mode_button" onclick="window.location.href = '/practice'" style="word-break: keep-all;">
-						Practice
+					<button id="play_again_button" style="word-break: keep-all;">
+						Play Again
+					</button>
+					<button id="switch_mode_button" onclick="window.location.href = '/'" style="word-break: keep-all;">
+						Daily Diffle
 					</button>
                     <button id="share_image_button">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
@@ -198,7 +204,7 @@
         <input type="radio" name="open_close_stats" id="open_stats" style="display: none">
         <div id="stats">
             <header>
-                <h2>Statistics</h2>
+                <h2>Practice Statistics</h2>
                 <label for="close_stats" style="position: absolute; right: 1rem;">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
                         <path fill="#878a8c"
@@ -226,14 +232,10 @@
                     <div><span class="stats_label">Average<br>Letters</span></div>
                 </div>
             </div>
-            <div id="timer_container" class="timer" style="display: none;">
-                <h2>Next DIFFLE</h2>
-                <div id="timer"></div>
-            </div>
         </div>
     </div>
     <div id="alert">not in word list</div>
-    <script src="data.js"></script>
+    <script src="/data.js"></script>
     <script src="main.js"></script>
 </body>
 
